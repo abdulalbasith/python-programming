@@ -1,15 +1,14 @@
-'''
 def add_two():
     result = 5 + 5
     print (result)
 
 add_two()
-'''
+
 #passing arguments
 
 def add_two2 (a, b):
     result = a + b
-    #print (result)
+    print (result)
 
 add_two2(5 , 4)
 
@@ -29,7 +28,7 @@ def sum_list (a_list):
         total += i
     return total 
 
-#print (sum_list([2,4,6]))
+print (sum_list([2,4,6]))
 
 #write a function that reverses a sting
 
@@ -41,7 +40,7 @@ def rev_string (my_string):
         index -= 1
     return reversed_string
 
-#print (rev_string("Jane"))
+print (rev_string("Jane"))
 
 def rev_string2(my_string):
     string = ''
@@ -49,7 +48,7 @@ def rev_string2(my_string):
         string = i + string
     return string
 
-#print(rev_string2('nohtyP'))
+print(rev_string2('nohtyP'))
 
 #write a function that finds the intersaction of two lists 
 #return the items that are in both list 1 and 2, in a new list
