@@ -48,3 +48,15 @@ def split_list (integer_list,integer):
 
 print (split_list([4, 5, 11, 8, 19], 10))
 
+#Problem 5
+
+def is_isogram (string):
+    index = 0
+    for letter in string:
+        if letter == string [index]:
+            result = "False"
+        else:
+            result = "True"
+        index += 1
+    return result
+print (is_isogram("abc"))
