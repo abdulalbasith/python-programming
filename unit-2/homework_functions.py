@@ -52,11 +52,13 @@ print (split_list([4, 5, 11, 8, 19], 10))
 
 def is_isogram (string):
     index = 0
-    for letter in string:
-        if letter == string [index]:
+
+    while index < len(string):
+        if string [index] == string [index+1]:
             result = "False"
         else:
             result = "True"
-        index += 1
+    index + 1
     return result
+
 print (is_isogram("abc"))
