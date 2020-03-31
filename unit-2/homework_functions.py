@@ -56,3 +56,15 @@ print (split_list([4, 5, 11, 8, 19], 10))
 # Problem 5
 # Determine if a string is an isogram
 
+def is_isogram (a_string):
+    seen = []
+    for letter in a_string:
+        
+        if letter in seen:
+            return False
+        else:
+            seen.append(letter)
+    
+    return True
+
+print (is_isogram("aabc"))
