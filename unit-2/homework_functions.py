@@ -1,4 +1,5 @@
 #Problem 1
+#function to count the occurence of a character in a string
 
 def letter_count (string, letter):
     count = 0
@@ -11,6 +12,9 @@ def letter_count (string, letter):
 print (letter_count("aaaabcde","a"))
 
 #Problem 2
+#function to count the number of words in string
+#second method, use the split method
+
 
 def count_words (string):
     word_count = 1
@@ -24,6 +28,7 @@ def count_words (string):
 print (count_words("I'm staying home because of the epidemic"))
 
 #Problem 3
+#function to reverse a list
 
 def reverse_list (old_list):
     new_list = []
@@ -44,6 +49,10 @@ def split_list (integer_list,integer):
             list_1.append(item)
         if item >= integer:
             list_2.append(item)
-    return list_1,list_2
+    return [list_1,list_2]
 
 print (split_list([4, 5, 11, 8, 19], 10))
+
+# Problem 5
+# Determine if a string is an isogram
+
