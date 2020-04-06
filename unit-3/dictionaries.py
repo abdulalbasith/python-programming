@@ -96,6 +96,7 @@ print (revers_lookup(state_capitals,"Austin"))
 
 def frequency_counter (string):
     words = string.split ()
+    print (words)
     word_count = {}
     for word in words:
         if word in word_count:
