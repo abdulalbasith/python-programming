@@ -16,4 +16,4 @@ movie2.add_cast({"name":"Danny", "age":33, "sex":"M"})
 #movie1.describe()
 #movie2.describe()
 
-movie2.save_to_file()
+print(movie2.compare_to(movie1))

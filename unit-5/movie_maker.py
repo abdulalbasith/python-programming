@@ -16,17 +16,17 @@ class Movie:
     def describe(self):
         print (f"Title: {self.title}\nGenre: {self.genre}\nRunning Time: {self.running_time} minutes\nCast: {self.cast}")
 
-    def compare_to (self,Movie):
+    def compare_to (self,other_movie):
         actors_in_common = 0
-        i=0
+ 
         for actor in self.cast:
-            if actor ["name"] in Movie.cast [i]:
-                actors_in_common += 1
-            i+=1
-            if actors_in_common < 2:
+            for other_actor in other_movie.cast:
+                if actor['name'] == other_actor ['name']:
+                    actors_in_common += 1
+                    break
+            if actors_in_common > 2:
                 return -1
-            else:
-                return 1
+        return 1
 
     def save_to_file(self,filename):
 
@@ -36,7 +36,6 @@ class Movie:
         "running time":self.running_time,
         "cast":self.cast
         }
-        f = open(filename,"w")
-        f.write(json.dumps(movie_data,indent=1))
-        f.close()
-
+        with open(filename,"w") as dump_file:
+            json.dump(movie_data,dump_file)
+        
