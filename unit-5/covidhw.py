@@ -18,13 +18,13 @@ class CovidStats ():
 
     def top_ten (self):
         cases_list = []
+        country_list = []
         for covid_cases in self.covid_data:
-            
             cases_list.append(covid_cases["cases"])
-
+            if covid_cases["cases"] in self.covid_data[]:
+                country_list.append(self.covid_data["country"])
             sorted_list = sorted(cases_list, key=lambda k:k['total'],reverse=True)
-
-        return sorted_list [0:9]
+        return country_list [0:9]
 
     def get_country_stats (self,country):
         for item in self.covid_data:
@@ -51,7 +51,7 @@ class CovidStats ():
 c = CovidStats()
 c.fetch_statistics()
 #c.stats_to_file("test.json")
-#print (c.top_ten())
+print (c.top_ten())
 #print (c.fetch_statistics())
 #print (c.get_country_stats("Canada"))
-print(c.test_unavailable())
+#print(c.test_unavailable())
