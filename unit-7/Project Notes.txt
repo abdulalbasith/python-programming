@@ -1,0 +1,10 @@
+Project Notes
+
+- Reading files and reading data should be in class
+- Class to access api
+- Functions to modify and make changes to data
+- User input from a file
+    - You can pull a data from API and dump it into a file
+How to get started:
+    - Think about what you want to do
+    
